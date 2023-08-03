@@ -1,0 +1,46 @@
+.lang-selector {
+  min-width: 210px;
+
+  &-minimal {
+    min-width: 0;
+
+    .select {
+      margin: 0;
+    }
+  }
+
+  .bitfinex-select {
+    &-button {
+      &.bp3-button {
+        font-size: 15px;
+        border-radius: 4px;
+        height: 40px;
+      }
+    }
+
+    &-menu {
+      .bp3-popover-content {
+        border-radius: 4px;
+
+        .bp3-menu {
+          &-item {
+            height: 40px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+
+            &.bp3-active {
+              background-color: var(--selectOptionBg);
+              color: var(--color);
+
+              &:hover {
+                background-color: var(--selectOptionHoverBg);
+                color: var(--activeColor);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

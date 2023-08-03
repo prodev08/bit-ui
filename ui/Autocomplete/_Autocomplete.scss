@@ -1,0 +1,40 @@
+.autocomplete {
+  width: 100%;
+  position: relative;
+
+  &-input {
+    width: 100%;
+  }
+
+  &-popup {
+    width: 100%;
+    position: absolute;
+    margin-top: 5px;
+    z-index: 2;
+    background-color: var(--autocompleteBgColor);
+    border: 1px solid var(--autocompleteBorderColor);
+    box-shadow: 0 0 1px #000000;
+
+    &-option {
+      padding: 3px 10px;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+
+      &:hover,
+      &.active {
+        background-color: var(--autocompleteOptionHoverBg);
+      }
+
+      &-main-text {
+        padding-right: 3px;
+        font-size: 13px;
+        color: var(--autocompleteMainTextColor);
+      }
+
+      &-secondary-text {
+        font-size: 11px;
+        color: var(--autocompleteSecondaryTextColor);
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.reason-submitted {
+  width: fit-content;
+  padding: 5px;
+
+  &-red {
+    color: red;
+    border: 2px solid red;
+  }
+
+  &-yellow {
+    color: yellow;
+    border: 2px solid yellow;
+  }
+
+  &-orange {
+    color: orange;
+    border: 2px solid orange;
+  }
+
+  &-grey {
+    color: grey;
+    border: 2px solid grey;
+  }
+}

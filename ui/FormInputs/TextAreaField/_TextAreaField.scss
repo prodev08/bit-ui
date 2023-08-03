@@ -1,0 +1,67 @@
+.custom-textarea-field {
+  position: relative;
+  margin: 1rem 0;
+
+  .label:not(.label--error):not(.label--warning) {
+    top: 0;
+    left: 0.75rem;
+    position: absolute;
+    cursor: text;
+    pointer-events: none;
+    white-space: nowrap;
+    transition: 0.2s ease-out;
+    color: var(--labelPlaceholderColor);
+
+    &.active {
+      top: -1.5rem;
+      pointer-events: auto;
+      cursor: auto;
+      color: var(--color);
+    }
+  }
+
+  &.active {
+    .label:not(.label--error):not(.label--warning) {
+      color: var(--activeColor);
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+  }
+
+  &-textarea {
+    &.bp3-input {
+      resize: vertical;
+      font-family: Arial, monospace;
+      font-size: 1rem;
+      width: 100%;
+      color: inherit;
+      background-color: var(--inputBgColor);
+      border: 1px solid var(--inputBorderColor);
+
+      &:focus {
+        box-shadow: none;
+        border: 1px solid var(--inputActiveBorderColor);
+      }
+
+      &:read-only {
+        background-color: var(--inputDisabledBg);
+        border-color: var(--inputDisabledBorder);
+        pointer-events: none;
+      }
+    }
+
+    &.error {
+      &:focus {
+        border-color: var(--redColor);
+      }
+    }
+
+    &.warning {
+      &:focus {
+        border-color: var(--yellowColor);
+      }
+    }
+  }
+}

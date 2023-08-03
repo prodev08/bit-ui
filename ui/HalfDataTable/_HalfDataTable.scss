@@ -1,0 +1,18 @@
+.half-data-table {
+  margin-bottom: 10px;
+  display: inline-block;
+  width: calc(50% - 8px);
+  vertical-align: top;
+
+  &:nth-of-type(1) {
+    margin-right: 16px;
+  }
+
+  &-table {
+    &.custom-table {
+      .custom-table-body-tr-td {
+        font-size: 0.95rem;
+      }
+    }
+  }
+}

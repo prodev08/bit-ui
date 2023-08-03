@@ -1,0 +1,20 @@
+.json-format {
+  white-space: pre-wrap;
+  max-width: 800px;
+
+  &-target {
+    width: 100%;
+
+    &.bp3-popover-target {
+      display: initial;
+    }
+  }
+
+  &-popover {
+    margin-left: 10px;
+  }
+
+  pre {
+    margin: 0;
+  }
+}

@@ -1,0 +1,17 @@
+.quick-summary {
+
+  .custom-table-body-tr-td {
+    .passed svg path {
+      fill: var(--greenPrimary);
+    }
+    .warning svg path {
+      fill: var(--orangeColor);
+    }
+    .failed svg path {
+      fill: var(--redColor);
+    }
+    .missing svg path {
+      fill: var(--mutedColor)
+    }
+  }
+}

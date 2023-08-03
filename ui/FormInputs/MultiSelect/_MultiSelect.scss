@@ -1,0 +1,78 @@
+.multi-select {
+  position: relative;
+  min-height: 30px;
+  margin: 1rem 0;
+
+  .bp3-multi-select {
+    &.bp3-button {
+      height: auto;
+    }
+
+    &:focus-within {
+      background-color: var(--selectBg);
+      border-color: var(--inputActiveBorderColor);
+    }
+
+    input {
+      padding-right: 24px;
+    }
+
+    &-tag-input-input {
+      color: var(--color);
+    }
+
+    .icon {
+      top: 3px;
+      right: 1px;
+    }
+
+    .bp3-tag-input-values {
+      margin-top: 4px;
+      align-self: baseline;
+
+      & > * {
+        margin-right: 7px;
+      }
+
+      .bp3-tag {
+        background-color: var(--multiTagBg);
+        color: var(--multiTagColor);
+        cursor: pointer;
+
+        .bp3-icon-small-cross {
+          margin: 0;
+        }
+
+        > * {
+          margin-right: 3px;
+        }
+
+        &:hover {
+          background-color: var(--multiTagHoverBg);
+        }
+
+        &-remove {
+          color: var(--multiTagRemove);
+        }
+      }
+    }
+  }
+
+  &.error {
+    .bp3-multi-select:focus-within {
+      border-color: var(--redColor);
+    }
+  }
+
+  &.warning {
+    .bp3-multi-select:focus-within {
+      border-color: var(--yellowColor);
+    }
+  }
+
+  .label:not(.label--error):not(.label--warning) {
+    position: absolute;
+    transform: translate(0.75rem, -1.5rem);
+    color: var(--color);
+  }
+}

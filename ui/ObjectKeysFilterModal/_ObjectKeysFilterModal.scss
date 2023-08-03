@@ -1,0 +1,31 @@
+@import 'ObjectKeysFilter/ObjectKeysFilter';
+
+.object-keys-filter-modal {
+  &--dialog {
+    width: 800px;
+
+    .bp3-heading {
+      .bp3-control {
+        margin-bottom: 0;
+      }
+    }
+
+    .bp3-dialog-body {
+      margin-bottom: 40px;
+    }
+  }
+
+  &-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 3px;
+    transform: translate(0, 2px);
+    display: inline-block;
+  }
+
+  &-switch {
+    display: inline-block;
+    margin-left: 20px;
+    transform: translate(0, 2px);
+  }
+}

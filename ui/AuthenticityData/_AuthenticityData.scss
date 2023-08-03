@@ -1,0 +1,19 @@
+.authenticity-data {
+  margin-bottom: 5px;
+
+  &-authenticity {
+    &-passed {
+      color: var(--greenPrimary);
+    }
+
+    &-indecisive,
+    &-processing {
+      color: var(--yellowColor);
+    }
+
+    &-failed,
+    &-error {
+      color: var(--redColor);
+    }
+  }
+}

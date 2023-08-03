@@ -1,0 +1,19 @@
+.webcam-picture {
+  display: block;
+  width: auto;
+  max-width: 786px;
+  height: auto;
+  max-height: 590px;
+  box-shadow: 0 0 0 1px var(--borderLineColor);
+
+  &-wrapper {
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+  }
+
+  &-retake {
+    display: block;
+    margin: 15px auto 0 auto;
+  }
+}

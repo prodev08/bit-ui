@@ -1,0 +1,20 @@
+.file-upload-form {
+  width: 650px;
+  max-width: 100%;
+
+  .file-input {
+    margin: 1rem 0;
+
+    .label--error,
+    .label--warning {
+      position: absolute;
+    }
+  }
+
+  .label--error,
+  .label--warning {
+    position: absolute;
+    // fixes flicker when transition of header hover is triggered
+    backface-visibility: hidden;
+  }
+}

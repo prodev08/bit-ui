@@ -1,0 +1,25 @@
+.dialog {
+  @import 'components/components';
+
+  min-width: 350px;
+  max-width: 90vw;
+  min-height: 200px;
+  max-height: 90vh;
+
+  &.dialog_without-header {
+    .dialog {
+      &-header {
+        display: none;
+      }
+
+      &-content {
+        border-radius: 10px 10px 0 0;
+      }
+    }
+  }
+
+  &.bp3-dialog {
+    padding-bottom: 0;
+    border-radius: 10px;
+  }
+}

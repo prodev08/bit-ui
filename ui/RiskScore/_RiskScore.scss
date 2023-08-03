@@ -1,0 +1,17 @@
+.risk-score {
+  margin-bottom: 1rem;
+
+  .safe {
+    color: var(--greenPrimary);
+  }
+  .warning {
+    color: var(--orangeColor);
+  }
+  .danger {
+    color: var(--redColor);
+  }
+  .prohibitted {
+    background-color: var(--cameraBtnColor);
+    color: var(--color);
+  }
+}

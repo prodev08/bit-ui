@@ -1,0 +1,110 @@
+.bp3-button {
+  min-width: 120px;
+  height: 36px;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+  border-radius: 2px;
+  font-size: 1rem;
+  background-image: none !important;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.3s ease-out;
+
+  &:not([class*='bp3-intent-']) {
+    border: 1px solid var(--btnBorderColor);
+    background-color: var(--btnBgColor);
+    color: var(--btnColor);
+    box-shadow: none;
+
+    &:active {
+      background-color: var(--btnBgColor);
+      box-shadow: none;
+    }
+
+    &.bp3-active {
+      background-color: var(--selectBg);
+      box-shadow: none;
+    }
+
+    &:hover {
+      background-clip: border-box;
+      box-shadow: none;
+      background-color: transparent;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  &:not(.bp3-minimal) {
+    &.bp3-intent {
+      &-success {
+        background-color: var(--btnSuccessBgColor);
+
+        &:hover {
+          background-color: var(--btnSuccessBgHoverColor);
+        }
+      }
+
+      &-primary {
+        background-color: var(--btnPrimaryBgColor);
+        color: var(--btnPrimaryColor);
+
+        &:hover {
+          background-color: var(--btnPrimaryBgHoverColor);
+        }
+      }
+    }
+  }
+
+  &.bp3-minimal {
+    height: 100%;
+    min-width: unset;
+    border: none;
+
+    &:hover {
+      color: var(--btnColor);
+    }
+
+    &.bp3-intent {
+      &-success {
+        color: var(--btnSuccessBgColor);
+
+        &:hover {
+          color: var(--btnSuccessBgColor);
+        }
+      }
+
+      &-primary {
+        color: var(--btnColor);
+
+        &:hover {
+          color: var(--btnColor);
+        }
+      }
+    }
+  }
+
+  &:focus {
+    outline: none !important;
+  }
+
+  &--small {
+    height: 30px;
+    line-height: 30px;
+  }
+
+  &--large {
+    height: 48px;
+  }
+
+  @at-root {
+    a#{&} {
+      &:hover {
+        color: var(--activeColor);
+      }
+    }
+  }
+}

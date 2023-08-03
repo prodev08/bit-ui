@@ -1,0 +1,14 @@
+.fullscreen-dialog-controls {
+  display: flex;
+  justify-content: center;
+
+  .bp3-button {
+    width: 100%;
+    margin: 0;
+    line-height: 35px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.card {
+  width: 350px;
+  min-height: 170px;
+  height: fit-content;
+  margin: 15px;
+  padding: 23px 25px;
+  border-radius: 2px;
+  overflow: hidden;
+  background-color: var(--bgSecondaryColor);
+  color: var(--color);
+
+  &:hover {
+    background-color: var(--verificationSectionHoverBgColor);
+    cursor: pointer;
+  }
+
+  &-icon {
+    flex-shrink: 0;
+    margin-left: -7px;
+    margin-bottom: 27px;
+
+    svg path {
+      fill: var(--activeColor);
+    }
+  }
+
+  &-title {
+    font-size: 29px;
+    font-weight: 500;
+    line-height: 30px;
+  }
+
+  &--active {
+    box-shadow: 0 0 0 1px var(--activeColor);
+    background-color: var(--verificationSectionHoverBgColor);
+  }
+
+  &--disabled {
+    background-color: var(--cardDisabledBgColor);
+
+    &:hover {
+      background-color: var(--cardDisabledBgColor);
+      cursor: not-allowed;
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .card {
+    display: flex;
+    align-items: center;
+    height: 89px;
+    margin: 10px 15px;
+
+    .ru & {
+      height: 170px;
+    }
+
+    &-icon {
+      margin-bottom: 0;
+      margin-right: 20px;
+
+      .ru & {
+        display: none;
+      }
+    }
+
+    &-title {
+      .ru & {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

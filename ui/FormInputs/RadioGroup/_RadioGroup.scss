@@ -1,0 +1,10 @@
+.radio-group {
+  .label {
+    white-space: nowrap;
+  }
+
+  .label:not(.label--error):not(.label--warning) {
+    transform: translate(0.75rem, 0);
+    color: var(--color);
+  }
+}

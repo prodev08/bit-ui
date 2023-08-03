@@ -1,0 +1,37 @@
+.navbar {
+  width: 100%;
+  border-bottom: 1px solid var(--navbarBorderBottomColor);
+  display: flex;
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: break-word;
+    text-align: center;
+    flex-basis: 100%;
+    min-width: 0;
+    padding: 0 5px;
+    margin: 0;
+    min-height: 36px;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    color: var(--navbarColor);
+
+    &:hover {
+      background-color: var(--navbarHoverBg);
+      color: var(--navbarHoverColor);
+    }
+
+    &.active {
+      background-color: var(--navbarActiveBg);
+      color: var(--navbarActiveColor);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

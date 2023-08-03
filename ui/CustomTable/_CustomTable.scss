@@ -1,0 +1,137 @@
+.custom-table {
+  width: 100%;
+  max-width: 100%;
+  display: table;
+  font-size: 0.86rem;
+  table-layout: fixed;
+  border: 1px solid var(--tableBorderColor);
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  &-head {
+    border-bottom: none;
+    background-color: var(--tableHeadBgColor);
+
+    &--disabled {
+      .custom-table-head-tr-th {
+        padding: 0;
+      }
+    }
+
+    &-tr {
+      &-th {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-align: center;
+        padding: 9px 2px;
+        white-space: nowrap;
+        font-weight: 500;
+        cursor: pointer;
+        user-select: none;
+        color: var(--activeColor);
+        
+        .bp3-popover-target {
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+
+        &-tooltip-icon {
+          margin-left: 5px;
+        }
+
+        &-sort-icon {
+          margin-left: 5px;
+
+          &.fa-sort-up {
+            vertical-align: bottom;
+          }
+
+          &.fa-sort-down {
+            vertical-align: top;
+          }
+        }
+      }
+
+      &.uppercase {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &-body {
+    &-tr {
+      border-bottom: 1px solid var(--tableBorderColor);
+
+      &-td {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-align: center;
+        white-space: nowrap;
+        padding: 9px 0;
+        max-width: 250px;
+        background-color: var(--tableCellBgColor);
+
+        &-tooltip {
+          .bp3-popover-target {
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+        }
+      }
+
+      &--expanded {
+        border-bottom: none;
+      }
+
+      &--expandable {
+        height: 0;
+        display: none;
+        transition: 0.3s;
+        border-bottom: 1px solid var(--tableBorderColor);
+
+        &--expanded {
+          height: auto;
+          display: table-row;
+        }
+      }
+    }
+  }
+
+  &--no-scroll {
+    .custom-table {
+      &-head-tr-th,
+      &-body-tr-td {
+        overflow: unset;
+        text-overflow: unset;
+        white-space: unset;
+        padding-left: 3px;
+        padding-right: 3px;
+      }
+    }
+  }
+
+  &--small & {
+    &-head-tr-th {
+      padding: 6px 2px;
+    }
+
+    &-body-tr-td {
+      padding: 1px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .custom-table {
+    min-width: 640px;
+
+    &-wrapper {
+      overflow-x: scroll;
+      width: 100%;
+    }
+
+    &--no-scroll {
+      min-width: unset;
+    }
+  }
+}

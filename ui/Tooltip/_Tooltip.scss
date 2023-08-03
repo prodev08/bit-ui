@@ -1,0 +1,20 @@
+.bp3-tooltip {
+  & > .bp3-popover {
+    &-arrow {
+      svg {
+        path.bp3-popover-arrow-fill {
+          fill: var(--tooltipBgColor);
+        }
+      }
+    }
+
+    &-content {
+      background: var(--tooltipBgColor);
+      color: var(--color);
+    }
+  }
+
+  p {
+    margin: 2px 0;
+  }
+}

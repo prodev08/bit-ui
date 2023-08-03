@@ -1,0 +1,17 @@
+.custom-radio {
+  position: relative;
+  padding: 4px 5px;
+}
+
+.bp3-radio.bp3-control {
+  .bp3-control-indicator,
+  input {
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input:focus ~ .bp3-control-indicator {
+    outline: none;
+  }
+}

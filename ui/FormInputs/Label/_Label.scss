@@ -1,0 +1,33 @@
+.label {
+  user-select: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 0.9rem;
+  white-space: normal;
+  line-height: 30px;
+  color: var(--color);
+
+  &:not(.label--error):not(.label--warning) {
+    max-width: calc(100% - 1.5rem);
+  }
+
+  &--error {
+    position: relative;
+    padding: 0.3rem 0.75rem 0 0.75rem;
+    font-size: 0.9rem;
+    line-height: initial;
+    color: var(--redColor) !important;
+  }
+
+  &--warning {
+    position: relative;
+    padding: 0.3rem 0.75rem 0 0.75rem;
+    font-size: 0.9rem;
+    line-height: initial;
+    color: var(--yellowColor) !important;
+  }
+}
+
+.salvador-form .label {
+  white-space: pre-line;
+}

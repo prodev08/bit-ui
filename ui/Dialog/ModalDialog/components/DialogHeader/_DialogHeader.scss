@@ -1,0 +1,53 @@
+.dialog-header {
+  &.bp3-dialog-header {
+    min-height: 60px;
+    border-radius: 10px 10px 0 0;
+    background-color: var(--dialogBodyBgColor);
+    box-shadow: none;
+    position: relative;
+
+    .bp3-heading {
+      margin: 0 auto;
+      width: fit-content;
+      flex: none;
+    }
+
+    &.dialog-header {
+      &_with-close-btn {
+        .bp3-heading {
+          margin: 0 auto;
+          max-width: calc(100% - 60px);
+        }
+      }
+
+      &_without-title {
+        .bp3-heading {
+          .bp3-dialog-close-button {
+            margin-left: auto;
+          }
+        }
+      }
+    }
+
+    .bp3-dialog-close-button {
+      margin: 0;
+      position: absolute;
+      right: 30px;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+
+      &:hover {
+        background-color: var(--dialogCloseBtnHoverBgColor);
+      }
+
+      .bp3-button-text {
+        svg.icon--cross {
+          line {
+            stroke: var(--dialogCloseBtnCrossColor);
+          }
+        }
+      }
+    }
+  }
+}

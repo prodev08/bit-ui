@@ -1,0 +1,87 @@
+@keyframes whiteStrokeGrowth {
+  0% {
+    stroke-dasharray: 22 242;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 264 0;
+    stroke-dashoffset: -242;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes buttonFadeIn {
+  0% {
+    background: none;
+    border: none;
+  }
+  100% {
+    background-color: var(--cameraBtnBgColor);
+    border: 8px solid var(--cameraBtnShutterBorderColor);
+  }
+}
+
+@keyframes buttonFadeOut {
+  0% {
+    background-color: var(--cameraBtnBgColor);
+    border: 8px solid var(--cameraBtnShutterBorderColor);
+  }
+  100% {
+    background: none;
+    border: none;
+  }
+}
+
+.camera-shutter-button {
+  background-color: var(--cameraBtnBgColor);
+  border: 8px solid var(--cameraBtnShutterBorderColor);
+  min-width: auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  background-clip: padding-box;
+  outline: none;
+  transition: border-width 0.1s ease-in-out;
+  flex-shrink: 0;
+
+  &:active {
+    border-width: 10px;
+  }
+
+  &.camera-shutter-button--with-countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+
+    > svg {
+      position: absolute;
+      border-radius: 40px;
+
+      .countdown {
+        font-size: 50px;
+        fill: #ffffff;
+        font-weight: bold;
+      }
+    }
+  }
+}

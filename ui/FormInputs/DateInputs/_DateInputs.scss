@@ -1,0 +1,12 @@
+.date-inputs {
+  display: inline-block;
+
+  .date-input {
+    display: inline-block;
+    margin: 15px 0;
+
+    &:first-child {
+      margin-right: 15px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.wizard-text {
+  &-title {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+    padding: 0 24px;
+  }
+
+  &-small-title {
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: bold;
+    padding: 0 24px;
+  }
+
+  &-subtitle {
+    font-size: 15px;
+    line-height: 18px;
+    opacity: 0.8;
+    padding: 0 24px;
+  }
+
+  &-text {
+    font-size: 14px;
+    line-height: 16px;
+    opacity: 0.6;
+  }
+
+  &-align-left {
+    text-align: left;
+    padding: 0;
+  }
+
+  &-align-center {
+    text-align: center;
+  }
+
+  &-align-right {
+    text-align: right;
+    padding: 0;
+  }
+}

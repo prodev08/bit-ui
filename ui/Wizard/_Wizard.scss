@@ -1,0 +1,47 @@
+.wizard {
+  @import 'components/components';
+
+  display: flex;
+  flex-direction: column;
+  width: 470px;
+  border-radius: 4px;
+  margin: auto;
+  position: relative;
+  background-color: var(--panelBgColor);
+  box-shadow: 0px 2px 20px var(--panelShadowColor);
+
+  &-without-header {
+    padding-top: 22px;
+  }
+
+  &-header {
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 54px 60px 0px 60px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .wizard {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 52px;
+    width: 100%;
+    border-radius: 0;
+    max-height: initial;
+    box-shadow: none;
+
+    &-mobile-full-screen {
+      top: 0;
+    }
+
+    &-without-header {
+      padding-top: 16px;
+    }
+
+    &-header {
+      padding: 16px 20px 0px 20px;
+    }
+  }
+}

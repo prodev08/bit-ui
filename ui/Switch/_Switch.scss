@@ -1,0 +1,29 @@
+.switch {
+  display: block;
+  width: fit-content;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px #82baf6;
+
+  .bp3-button {
+    height: 48px;
+    padding: 12px 28px;
+    white-space: nowrap;
+    min-width: unset;
+    border: none;
+
+    &:not([class*='bp3-intent-']) {
+      background-color: transparent;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .switch {
+    display: flex;
+    width: 100%;
+
+    .bp3-button {
+      flex-grow: 1;
+    }
+  }
+}

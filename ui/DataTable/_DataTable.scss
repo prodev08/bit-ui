@@ -1,0 +1,118 @@
+.data-table {
+  background-color: inherit;
+  outline: none;
+
+  .bp3-table-cell-client {
+    color: var(--color);
+    background-color: var(--tableCellBgColor);
+  }
+
+  &-header {
+    &-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &-tooltip-icon {
+      margin-left: 5px;
+    }
+
+    &-sort-icon {
+      margin-left: 5px;
+      cursor: pointer;
+
+      &.fa-sort-up {
+        padding-top: 8px;
+      }
+
+      &.fa-sort-down {
+        padding-bottom: 4px;
+      }
+    }
+  }
+
+  &-cell {
+    &-content {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &.header-uppercase .bp3-table-header-content {
+    text-transform: uppercase;
+  }
+}
+
+.bp3-table {
+  &-container {
+    border: 1px solid var(--tableBorderColor);
+  }
+
+  &-column {
+    &-headers {
+      background-color: var(--tableHeadBgColor);
+      color: inherit;
+
+      .bp3-table-header {
+        line-height: 24px;
+        box-shadow: none;
+        color: var(--activeColor);
+      }
+
+      .bp3-table-header-content {
+        font-size: 0.86rem;
+        font-weight: 500;
+        text-align: center;
+        padding: 8px 4px;
+
+        * {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &-selection-enabled .bp3-table-header:hover::before {
+    background-color: var(--tableHeadBgColor);
+  }
+
+  &-quadrant-scroll-container {
+    background-color: var(--tableCellBgColor);
+  }
+
+  &-cell {
+    padding: 8px 4px;
+    line-height: 24px;
+    color: var(--color);
+    font-size: 0.86rem;
+    text-align: center;
+    border-bottom: 1px solid var(--tableBorderColor);
+    box-shadow: none;
+
+    * {
+      outline: none;
+    }
+
+    &.bp3-table-last-in-column {
+      border-bottom: none;
+    }
+  
+    &-ledger {
+      &-even {
+        background-color: var(--complianceTableoddBg);
+      }
+
+      &-odd {
+        background-color: var(--complianceTableEvenBg);
+      }
+    }
+  }
+}

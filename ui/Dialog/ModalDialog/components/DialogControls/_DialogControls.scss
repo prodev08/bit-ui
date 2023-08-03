@@ -1,0 +1,15 @@
+.dialog-controls {
+  margin: 0;
+
+  .bp3-dialog-footer-actions {
+    margin: 0;
+
+    .bp3-button {
+      margin: 0;
+    }
+
+    :not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

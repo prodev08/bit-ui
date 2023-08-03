@@ -1,0 +1,32 @@
+.notice {
+  padding: 10px 14px;
+  border-radius: 2px;
+  margin-top: 25px;
+
+  &-title {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &-item {
+    padding: 5px 2px;
+
+    &-icon {
+      width: 27px;
+    }
+  }
+
+  &--small {
+    margin-top: 0;
+  }
+
+  &--green {
+    border: 1px solid #7a9c4a;
+    background-color: rgba(122, 156, 74, 0.2);
+  }
+
+  &--red {
+    border: 1px solid #7b1a1f;
+    background-color: rgba(123, 26, 31, 0.2);
+  }
+}

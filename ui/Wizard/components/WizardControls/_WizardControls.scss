@@ -1,0 +1,20 @@
+.wizard-controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  grid-gap: 20px;
+  padding: 20px 60px;
+  flex: 0 0;
+  border-top: 1px solid var(--panelDividerBgColor);
+
+  .bp3-button {
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .wizard-controls {
+    padding: 20px 20px;
+  }
+}

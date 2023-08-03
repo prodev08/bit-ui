@@ -1,0 +1,25 @@
+.fullscreen-dialog {
+  &-header {
+    min-height: 52px;
+    border-bottom: 1px solid var(--headerBorderColor);
+    background-color: var(--dialogBodyBgColor);
+  }
+
+  &-back-btn {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+
+    .bp3-button-text {
+      svg path {
+        fill: var(--fullScreenDialogBackBtnColor);
+        stroke: var(--fullScreenDialogBackBtnColor);
+      }
+    }
+  }
+}

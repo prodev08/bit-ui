@@ -1,0 +1,26 @@
+.country-edit-label {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: flex-end;
+  grid-gap: 5px;
+
+  .icon {
+    position: initial;
+    right: auto;
+  }
+
+  &-text {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 12px;
+    opacity: 0.6;
+    color: var(--color);
+  }
+
+  &-edit {
+    font-size: 14px;
+    color: var(--activeColor);
+  }
+}

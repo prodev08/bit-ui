@@ -1,0 +1,15 @@
+.state-indication-icon {
+  &-checkmark {
+    svg.icon--checkmark {
+      path {
+        fill: var(--greenPrimary);
+      }
+    }
+  }
+
+  &-cross {
+    transform: scale(0.8);
+    vertical-align: middle;
+    margin-left: -1px;
+  }
+}

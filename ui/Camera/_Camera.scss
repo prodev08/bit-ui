@@ -1,0 +1,190 @@
+@import 'ShutterButton/ShutterButton';
+
+.camera {
+  &-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bgColor);
+  }
+
+  &-container {
+    position: relative;
+    min-height: 650px;
+
+    &-cover {
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+
+    &-mirrored {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &-canvas {
+    display: none;
+  }
+
+  &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &-content {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &-icon {
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 100px;
+    margin-right: auto;
+  }
+
+  &-controls {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 16px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    overflow-y: auto;
+
+    &-spacer {
+      flex-grow: 1;
+    }
+
+    &-hold-still {
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: bold;
+    }
+
+    &-issue {
+      svg.icon--exclamation-circle {
+        height: 100px;
+        width: 100px;
+
+        path {
+          fill: var(--redColor);
+        }
+      }
+    }
+  }
+
+  &-action-button {
+    height: 44px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    font-weight: bold;
+    outline: none;
+    border: 1px solid;
+    transition: transform 0.1s ease-in-out;
+    flex-shrink: 0;
+
+    &:active {
+      transform: scale(0.98);
+    }
+
+    &-primary {
+      background-color: var(--cameraBtnBgColor);
+      border-color: var(--cameraBtnBorderColor);
+      color: var(--cameraBtnColor);
+    }
+
+    &-secondary {
+      background-color: var(--cameraBtnBgSecondaryColor);
+      border-color: var(--cameraBtnBorderSecondaryColor);
+      color: var(--cameraBtnSecondaryColor);
+    }
+  }
+
+  &-title {
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+    padding: 0px 20px;
+    color: var(--cameraTextColor);
+  }
+
+  &-subtitle {
+    text-align: center;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 0px 20px;
+    opacity: 0.8;
+    color: var(--cameraTextColor);
+  }
+
+  &-flash {
+    animation: flash-animation 300ms ease-out;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .camera-container {
+    min-height: auto;
+  }
+}
+
+@keyframes flash-animation {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .camera-content {
+    flex-direction: column;
+  }
+
+  .camera-icon {
+    margin-top: 100px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

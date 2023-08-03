@@ -1,0 +1,24 @@
+@import 'ObjectKeysFilterItem/ObjectKeysFilterItem';
+
+.object-keys-filter {
+  &-item {
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+  }
+
+  .suggest {
+    display: block;
+    width: 100%;
+
+    .bp3-menu {
+      &-item {
+        font-size: 11px;
+      }
+    }
+
+    .bp3-input {
+      font-size: 13px;
+    }
+  }
+}

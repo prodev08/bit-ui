@@ -1,0 +1,39 @@
+.pagination {
+  @import 'QueryLimit/QueryLimit';
+
+  display: flex;
+  align-items: center;
+
+  &-icon {
+    margin: 0 2px;
+    padding: 0 1px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    vertical-align: middle;
+    color: var(--paginationArrow);
+    user-select: none;
+
+    &-disabled {
+      cursor: default;
+      color: var(--paginationArrowDisabled);
+    }
+  }
+
+  .pagination-input {
+    display: inline-block;
+    margin: 0 5px;
+    width: 54px;
+
+    .bp3-input {
+      height: 25px;
+      line-height: 25px;
+      text-align: center;
+    }
+  }
+
+  &-pages {
+    vertical-align: middle;
+    margin-right: 5px;
+    user-select: none;
+  }
+}
